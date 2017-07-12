@@ -18,12 +18,6 @@ public class StringDecoder {
                 if ("-e".equals(original)) {
                     break;
                 }
-//                char[] chars = new char[1024];
-//                reader.read(chars);
-//
-//                original = new String(chars);
-//                System.out.println(original);
-
                 original = reader.readLine();
                 System.out.println(toUTF8(original));
             }
@@ -36,7 +30,7 @@ public class StringDecoder {
         Charset defaultCharset = Charset.defaultCharset();
         Charset utf = StandardCharsets.UTF_8;
 
-        System.out.println(defaultCharset.displayName());
+        System.out.println("Default charset: " + defaultCharset.displayName());
 
         byte[] bytes = source.getBytes(defaultCharset);
 
